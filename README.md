@@ -39,7 +39,7 @@ Once User has Created Account they will be directed to their new Profile Page. F
 ## **User Stories:**
 
 ### Welcome Page (http://localhost:3000/welcome) 
-1. The Welcome Page displays a register form, which requests for name, username, and email address, and two buttons: "Create Account With Tour" and "Create Account Wihtout Tour."
+1. The Welcome Page displays a registration form, which requests and requires name, username, and email address, as well as two buttons: "Create Account With Tour" and "Create Account Without Tour."
 2. A user populates requested information and clicks a button of choice.
 
 ### Tour Page (http://localhost:3000/tour)
