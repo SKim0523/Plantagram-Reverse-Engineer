@@ -2,9 +2,9 @@
 MEN - Full stack app building
 
 ## **Project Description**
-- This project reverse engineers three key features of the Instagram page to build full-stack web application based on Express, Node.js, Mongoose, and MongoDB. 
+- This project reverse engineers three key features of the Instagram page to build a full-stack web application based on Express, Node.js, Mongoose and MongoDB. 
 - CRUD functionalities are applied based on RESTful architecture.
-- Entity Relationship Diagram shows One-to-May data relationship between User and Post models:
+- Entity Relationship Diagram shows One-to-Many data relationship between User and Post models:
 ![Screen Shot 2022-04-26 at 12 13 59 PM](https://user-images.githubusercontent.com/79298250/165356456-4b5f5b47-648b-46b0-b195-07e7f3354895.png)
 
 ## **Wireframe**
