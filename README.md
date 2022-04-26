@@ -12,7 +12,7 @@ MEN - Full stack app building
 When opening the website users will be directed to Welcome Page where they can register and create an account. The user will have the option to Create Account with and without Tour that will give them a quick How To on navigating and using the site. 
 ![IMG_2805](https://user-images.githubusercontent.com/101548840/165372339-d15d18b1-1a85-4f1a-bb22-768846abed29.jpg)
 
-Once User has Created Account they will be directed to their new Profile Page. From this page a user can do a few things, such as Creating post, Viewing a post, and Editing their profile. Once a post has been Created, users will also be able to Update and Delete their post.
+Once User has Created Account they will be directed to their new Profile Page. From this page, a user can do a few things such as Creating post, Viewing a post, and Editing their profile. Once a post has been Created, users will also be able to Update and Delete their post.
 ![IMG_2806](https://user-images.githubusercontent.com/101548840/165372362-ac98cebb-386d-434c-9354-c2a6a0d20b3d.jpg)
 
 
