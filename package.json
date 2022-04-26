@@ -1,0 +1,25 @@
+{
+  "name": "project-two-reverse-engineer",
+  "version": "1.0.0",
+  "description": "Project2-Reverse-Engineer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SKim0523/Project-Two-Reverse-Engineer.git"
+  },
+  "author": "Sarah Kim and Brigitte Quintero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SKim0523/Project-Two-Reverse-Engineer/issues"
+  },
+  "homepage": "https://github.com/SKim0523/Project-Two-Reverse-Engineer#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "mongoose": "^6.3.1"
+  }
+}
