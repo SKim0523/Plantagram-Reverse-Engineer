@@ -29,8 +29,13 @@ Once User has Created Account they will be directed to their new Profile Page. F
 - Google Chrome
 
 ## **Routes Pages**
- *Inserting Table*  
-
+*Need to Update Our Routes*
+| Method | Route         | Description             |
+| ------ | ------------- | ----------------------- |
+| GET    | /             | Read all posts          |
+| POST   | /             | Create post\*           |
+| PUT    | /id/:id       | Update entire post\*    |
+| DELETE | /id/:id       | Delete post\*           |
 
 ## **User Stories:**
 ### Welcome Page  
