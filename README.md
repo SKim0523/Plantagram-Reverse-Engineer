@@ -94,4 +94,4 @@ Once User has Created Account they will be directed to their new Profile Page. F
 - User will be given an option to search different accounts
 - User will be given an option to follow the accounts they like
 - User will be given an option to rank the accounts they follow to receive more feeds from highly-ranked accounts 
-- We are just checking if this work properly for both of us! 
+
