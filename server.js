@@ -10,11 +10,15 @@ app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }))
 app.use('/users', controllers.users)
 
+// app.use('/posts', controllers.posts)
+
+
 app.set('view engine', 'ejs')
 
 app.get('/tour', (req, res) => {
     res.render('tour.ejs')
 })
+
 
 
 app.listen(PORT, () => console.log (`Listening on port: ${PORT}`));
@@ -31,3 +35,4 @@ app.listen(PORT, () => console.log (`Listening on port: ${PORT}`));
 // Welcome Page >> /user/registration
 // Tour Page >> /tour
 // Index Page >> /user/profile
+
