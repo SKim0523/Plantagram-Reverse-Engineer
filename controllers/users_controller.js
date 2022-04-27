@@ -3,6 +3,7 @@ const router =  express.Router();
 const db = require('../models')
 
 
+// Routes: http://localhost:3000/users
 
 // Displays form for registrating a new user
 
