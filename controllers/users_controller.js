@@ -11,7 +11,9 @@ router.get('/registraion', (req, res) => {
 })
 
 // Create route for user
-router.post('/registraion', async (req, res, next) => {
+
+router.post('/', async (req, res, next) => {
+
     try {
         // console.log(`The req.body is ${req.body}`)
         const createdUser = await db.User.create(req.body);
@@ -23,6 +25,7 @@ router.post('/registraion', async (req, res, next) => {
         return next();
     }
 })
+
 
 //I need to get access to the profile page
 //the profile displays come profile info on the top
