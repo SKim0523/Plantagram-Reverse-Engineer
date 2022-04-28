@@ -23,7 +23,7 @@ router.post('/', async (req,res, next)=>{
         const newPost = await db.Post.create(req.body)
         console.log(`The created product is ${newPost}`)
         // res.redirect('/post')
-        res.redirect('/post') // would this be '/profile?
+        res.redirect('/user/profile') 
         // return user to profile with posts page -> 
     } catch(err){
         console.log(error);
@@ -31,28 +31,8 @@ router.post('/', async (req,res, next)=>{
         return next();
     }
 });
-//What is the difference between this create route and the one above?
-// create - POST route 
-// router.post('/', async (req,res, next)=>{
-//     try{
-//         const newReviewData = req.body
-//         const newReview = await db.Review.create(newReviewData)
-//         console.log(newReview)
-//         // res.redirect('/reviews')
-//         res.redirect(`/products/${newReview.product}`)
-//         // return user to product detail page -> 
-//     }catch(err){
-//         console.log(error);
-//         req.error = error;
-//         return next();
-//    }
 
-
-
-
-
-
-// // update - PUT route
+// update - PUT route
 // router.put('/:postId', async (req,res, next)=>{
 //     res.send('hitting post update: '+req.params.postId)
 // })

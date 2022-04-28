@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Page | <%= post.name%></h1>
+    <div>
+        <form method="POST" action="/post/<%= post._id %>?_method=PUT">
+            <div>
+                <label> Edit Caption: </label>
+                <input name='caption' type='text' value= '<%=post.caption %>'/>
+            </div>
+            <div>
+                <label> Edit Location: </label>
+                <input name='location' type='text' value='<%=post.location %>'/>
+            </div>
+            <div>
+                <input type="submit" value="Edit Post: <%= post.name%>"/> 
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
