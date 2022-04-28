@@ -5,49 +5,13 @@ const db = require('../models')
 
 // Routes: http://localhost:3000/users
 
-// Displays form for registrating a "new" user
+// (1) Displays form for registrating a "new" user
 
 router.get('/registration', (req, res) => {
     res.render('registration.ejs');
 })
 
-//"show" route
-
-router.get('/profile/:id', async (req, res, next) => {
-    try {
-        const foundUser = await db.User.findById(req.params.id)
-        const allPosts = await db.Post.find({user: req.params.id})
-        const context = { 
-            oneUser: foundUser,
-            posts: allPosts,
-        }
-       
-        return res.render('profile.ejs', context)
-        console.log(context)
-        // console.log(foundUser)
-        // console.log(req.params.id)
-    } catch (error) {
-        console.log(error);
-        req.error = error;
-        return next();
-    }
-})
-
-router.get('/:id/edit', async (req,res, next)=>{
-    try {
-        const updatedUser = await db.User.findById(req.params.id);
-        const context = {
-            user: updatedUser
-        }
-        return res.render('editprof.ejs', context)
-    } catch (error) {
-        console.log(error);
-        req.error = error;
-        return next();
-    }
-})
-
-// Create route for user
+// (2) 'Create Account' button; Creates a user with the help of (1)
 
 router.post('/registration', async (req, res, next) => {
     try {
@@ -80,6 +44,44 @@ router.post('/registration', async (req, res, next) => {
     }
 });
 
+// (3) Displays user's profile page
+
+router.get('/profile/:id', async (req, res, next) => {
+    try {
+        const foundUser = await db.User.findById(req.params.id)
+        const allPosts = await db.Post.find({user: req.params.id})
+        const context = { 
+            oneUser: foundUser,
+            posts: allPosts,
+        }
+       
+        return res.render('profile.ejs', context)
+        console.log(context)
+        // console.log(foundUser)
+        // console.log(req.params.id)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+// (4) "Edit Profile" link; Form for editing user
+router.get('/edit/:id', async (req,res, next)=>{
+    try {
+        const updatedUser = await db.User.findById(req.params.id);
+        const context = {
+            user: updatedUser
+        }
+        return res.render('editprof.ejs', context)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+// (5) "Save Button" on Edit Profile Page; 
 router.put('/profile/edit/:id', async (req, res, next) => {
     try {
         // const updatedUser = await db.User.findByIdAndUpdate(req.params.id, req.body);
