@@ -9,21 +9,13 @@ require('./config/db.connection')
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }))
 app.use('/users', controllers.users)
-<<<<<<< HEAD
-=======
 app.use('/posts', controllers.posts)
->>>>>>> b5f552750c26d4651cd355a7a98e51f708a8307a
-
 app.set('view engine', 'ejs')
 
 app.get('/tour', (req, res) => {
     res.render('tour.ejs')
 })
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b5f552750c26d4651cd355a7a98e51f708a8307a
 app.listen(PORT, () => console.log (`Listening on port: ${PORT}`));
 
 
