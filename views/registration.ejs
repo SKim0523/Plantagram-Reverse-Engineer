@@ -9,24 +9,25 @@
 <body>
     <h1>Welcome!</h1>
     <h2>Register Below</h2>
-    <form method="POST" action="/main">
+    <form method="POST" action="/users/registration">
         <div>
-            <label for="name">Name: </label>
+            <label for="name">Name:</label>
             <input id="name" name="name" type="text"/>
         </div>
         <div>
-            <label for="username">Username: </label>
+            <label for="username">Username:</label>
             <input id="username" name="username" type="text"/>
         </div>
         <div>
-            <label for="email">Email: </label>
+            <label for="image">Profile Photo:</label>
+            <input id="image" name="image" type="text"/>
+        </div>
+        <div>
+            <label for="email">Email:</label>
             <input id="email" name="email" type="text"/>
         </div>
-
-        <a href="http://localhost:3000/tour">
-            <input type="button" value="Create Account With Tour"/>
-        <a href="http://localhost:3000/users/profile"> 
-        <input type="button" value="Create Account Without Tour">
+        <input type="submit" value="Create Account"/>
+       
     </form>
 </body>
 </html>
