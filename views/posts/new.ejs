@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <h1>Create Post</h1>
+        <form method='POST' action='/posts'>
+            <div>
+                <label for='image'> Post Image(url): </label>
+                <input id='image' name='image' type='text' />
+            </div>
+            <div>
+                <label for='caption'> Write A Caption: </label>
+                <input id='caption' name='caption' type='text' />
+            </div>
+            <div>
+                <label for='location'> Location: </label>
+                <input id='location' name='location' type='location' />
+            </div>
+            <input type='submit' value='Create New Post'>
+        </form>
+    </body>
+
+</html>
