@@ -35,8 +35,8 @@ router.post('/registration', async (req, res, next) => {
         //     oneUser: createdUser,
         // }
         // res.render('/profile.ejs',context);
-        // res.redirect(`/users/profile/${id}`);
-        setTimeout(() => {res.redirect(`/users/profile/${id}`)}, 1000)
+        res.redirect(`/users/profile/${id}`);
+        // setTimeout(() => {res.redirect(`/users/profile/${id}`)}, 1000)
     } catch (error) {
         console.log(error);
         req.error = error;
@@ -67,7 +67,7 @@ router.get('/profile/:id', async (req, res, next) => {
 })
 
 // (4) "Edit Profile" link; Form for editing user
-router.get('/edit/:id', async (req,res, next)=>{
+router.get('/profile/edit/:id', async (req,res, next)=>{
     try {
         const updatedUser = await db.User.findById(req.params.id);
         const context = {
@@ -84,10 +84,10 @@ router.get('/edit/:id', async (req,res, next)=>{
 // (5) "Save Button" on Edit Profile Page; 
 router.put('/profile/edit/:id', async (req, res, next) => {
     try {
-        // const updatedUser = await db.User.findByIdAndUpdate(req.params.id, req.body);
-        
+        const updatedUser = await db.User.findByIdAndUpdate(req.params.id, req.body);
+        // console.log(req.body);
         // console.log(updatedUser);
-        // return res.redirect(`/users/profile/${req.params.id}`)
+        return res.redirect(`/users/profile/${req.params.id}`)
         console.log(req.body)
     } catch (error) {
         console.log(error);
@@ -95,5 +95,20 @@ router.put('/profile/edit/:id', async (req, res, next) => {
         return next();
     }
 })
+
+//(6) "Delete" profile
+// router.delete('/profile/:id', async (req,res, next)=>{
+//     try {
+//         const deletedUser = await db.User.findByIdAndDelete(req.params.id);
+//         const deletedPosts = await db.Post.deleteMany({user: req.params.id};
+//         console.log(deletedReviews);
+//         return res.redirect('/?')
+//     } catch (error) {
+//         console.log(error);
+//         req.error = error;
+//         return next();
+//     }
+// })
+
 
 module.exports = router

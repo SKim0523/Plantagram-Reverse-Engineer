@@ -10,15 +10,21 @@
     <main>
         <div class="container">
             <div class="profile-image">
-                <img src="<%= oneUser.profile_image %>" alt="<%= oneUser.name %>">
+                <h1><%=oneUser.name %></h1>
+                <img src="<%=oneUser.profile_image %>" alt="<%=oneUser.name%>">
             </div>
             <div class="profile-info">
-                <h1><%= oneUser.username %></h1>
+                <h1><%=oneUser.username %></h1>
+                <h3><%=oneUser.pronouns %></h3>
+                <h3><%=oneUser.website %></h3>
+                <h3><%=oneUser.email%></h3>
+                <h3><%=oneUser.bio%></h3>
                 <div>
-                <a href="/users/edit/<%=oneUser._id %>">Edit Profile</a>
+                <a href="/users/profile/edit/<%=oneUser._id %>">Edit Profile</a>
                 </div>
             </div>
         </div>
+        <!--section for posting should be added below-->
         
     </main>
 </body>
