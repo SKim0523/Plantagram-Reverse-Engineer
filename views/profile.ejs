@@ -7,25 +7,19 @@
     <title>Profile Page</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="profile-image">
-                <img src="" alt="profile-photo">
-            </div>
-            <div class="profile-info">
-                <h1>Username</h1>
-                <button>Edit Profile</button>
-            </div>
-        </div>
-    </header>
     <main>
         <div class="container">
-            <% for(let i = 0; i < posts.length; i++){ %>
-                <% const post=posts[i] %>
-            <img src="<%= post.image %>" class="post-photo" alt="">
+            <div class="profile-image">
+                <img src="<%= oneUser.profile_image %>" alt="<%= oneUser.name %>">
+            </div>
+            <div class="profile-info">
+                <h1><%= oneUser.username %></h1>
+                <div>
+                <a href="/users/edit/<%=oneUser._id %>">Edit Profile</a>
+                </div>
             </div>
         </div>
+        
     </main>
-
 </body>
 </html>
