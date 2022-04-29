@@ -5,6 +5,38 @@ const db = require('../models')
 
 // Routes: http://localhost:3000/users
 
+// Directs user from profile page to Tour Page
+router.get('/tour/:id', async (req, res, next) => {
+    try {
+        const touringUser= await db.User.findById(req.params.id);
+        // console.log(touringUser)
+        const context = { 
+            user: touringUser
+        }
+        res.render('tour.ejs', context)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+// (0) Directs user from Tour page to Profile Page
+router.get('/tour/:id', async (req, res, next) => {
+    try {
+        const touringUser= await db.User.findById(req.params.id);
+        const context = { 
+            user: touringUser
+        }
+        return res.redirect(`/users/profile/${user}`)
+        console.log(req.body)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
 // (1) Displays form for registrating a "new" user
 
 router.get('/registration', (req, res) => {
