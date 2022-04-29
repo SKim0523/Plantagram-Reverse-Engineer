@@ -24,7 +24,7 @@ router.get('/new/:id', async (req, res, next) =>{
 })
 
 // create - POST route 
-router.post('/', async (req,res, next)=>{
+router.post('/new', async (req,res, next)=>{
     try{
         const newPost = await db.Post.create(req.body)
         console.log(`The created product is ${newPost}`)
