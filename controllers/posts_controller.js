@@ -17,13 +17,20 @@ router.get('/', async (req, res, next) => {
     }
 });
 
+router.get('/new/:id', async (req, res, next) =>{
+    const context = {user: req.params.id}
+    res.render('posts/new.ejs', context)
+    console.log(context)
+})
+
 // create - POST route 
 router.post('/', async (req,res, next)=>{
     try{
         const newPost = await db.Post.create(req.body)
         console.log(`The created product is ${newPost}`)
         // res.redirect('/post')
-        res.redirect('/user/profile') 
+        const id = req.body.user
+        res.redirect(`/users/profile/${id}`) 
         // return user to profile with posts page -> 
     } catch(err){
         console.log(error);
