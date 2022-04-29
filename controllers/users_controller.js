@@ -95,19 +95,5 @@ router.put('/profile/edit/:id', async (req, res, next) => {
     }
 })
 
-//(6) "Delete" profile
-// router.delete('/profile/:id', async (req,res, next)=>{
-//     try {
-//         const deletedUser = await db.User.findByIdAndDelete(req.params.id);
-//         const deletedPosts = await db.Post.deleteMany({user: req.params.id};
-//         console.log(deletedReviews);
-//         return res.redirect('/?')
-//     } catch (error) {
-//         console.log(error);
-//         req.error = error;
-//         return next();
-//     }
-// })
-
 
 module.exports = router

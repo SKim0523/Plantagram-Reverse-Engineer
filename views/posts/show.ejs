@@ -16,9 +16,9 @@
         <h4><%=post.location%></h4>
     </div>
     <div>
-        <a href="/post/edit/<%= post._id %>">Edit Post</a>
+        <a href="/posts/edit/<%= post._id %>">Edit Post</a>
     </div>
-    <form action="/post/edit/<%= post._id %>?_method=DELETE" method="POST">
+    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete Post" />
     </form>
 </html>
