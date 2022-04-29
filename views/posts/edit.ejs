@@ -2,9 +2,12 @@
 <html lang="en">
     <%- include('partials/head.ejs')%>
 <body>
-    <h1>Edit Page | <%= post.name%></h1>
+    <h1>Edit Post</h1>
     <div>
-        <form method="POST" action="/post/<%= post._id %>?_method=PUT">
+        <form method="POST" action="/posts/edit/<%=post._id %>?_method=PUT">
+            <div>
+                <img src="<%=post.image %>" alt="<%=post.name %>"/>
+            </div>
             <div>
                 <label> Edit Caption: </label>
                 <input name='caption' type='text' value= '<%=post.caption %>'/>
@@ -14,7 +17,7 @@
                 <input name='location' type='text' value='<%=post.location %>'/>
             </div>
             <div>
-                <input type="submit" value="Edit Post: <%= post.name%>"/> 
+                <input type="submit" value="Save"/> 
             </div>
         </form>
     </div>
