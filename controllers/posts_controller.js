@@ -17,6 +17,7 @@ const db = require('../models')
 //     }
 // });
 
+// Displays formfor new post
 router.get('/new/:id', async (req, res, next) =>{
     const context = {user: req.params.id}
     res.render('posts/new.ejs', context)
