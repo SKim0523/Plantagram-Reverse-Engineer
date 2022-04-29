@@ -30,13 +30,15 @@ const userSchema = new mongoose.Schema({
         timestamps: true
     }
 );
-
+//https://mongoosejs.com/docs/tutorials/virtuals.html
 userSchema.virtual('posts',{ 
-    ref:'Post',
+    ref:'Post', // same as the collection name 
     localField:'_id',
-    foreignField: 'user',
+    foreignField: 'user', // user property inside the Post model
     justOne: false
     })
+//The ref option, which tells Mongoose which model to populate documents from.
+// Mongoose will populate documents from the model in ref whose foreignField matches this document's localField.
 
 const User = mongoose.model('User', userSchema);
 

@@ -29,8 +29,10 @@
         </div>
         <% for(let i = 0; i < posts.length; i++){ %>
             <% const post=posts[i] %>
+        <!-- <a href="/posts/show/<%=post._id %>-->
         <img src="<%= post.image %>" class="post-photo" alt="<%= post.caption %> Image">
-         <% } %>  
+        <!-- </a>  -->
+        <% } %>  
     </main>
 </body>
 </html>
