@@ -39,6 +39,21 @@ router.post('/new', async (req,res, next)=>{
     }
 });
 
+//Show route
+router.get('/:postId', async (req,res, next)=>{
+    try {
+        const foundPost = await db.Post.findById(req.params.postId)
+        const context = { 
+            post: foundPost
+        }
+        res.render('posts/show.ejs', context)
+    }catch(error){
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
 // update - PUT route
 // router.put('/:postId', async (req,res, next)=>{
 //     res.send('hitting post update: '+req.params.postId)
