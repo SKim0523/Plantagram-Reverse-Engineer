@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/styles/main.css">
-    <title>Profile Page</title>
-</head>
+    <%- include('partials/head.ejs')%>
 <body>
     <main>
         <div class="container">
@@ -20,12 +14,10 @@
                 <h3><%=oneUser.website %></h3>
                 <h3><%=oneUser.email%></h3>
                 <h3><%=oneUser.bio%></h3>
-                <div>
-                <a href="/users/profile/edit/<%=oneUser._id %>">Edit Profile</a>
-                </div>
             </div>
-            <div>
-                <a href="/posts/new/<%=oneUser._id %>">Add Post</a>
+            <div class="">
+                <button><a href="/users/profile/edit/<%=oneUser._id %>">Edit Profile</a></button>
+                <button><a href="/posts/new/<%=oneUser._id %>">New Post</a></button>
             </div>
         </div>
         <div>
