@@ -5,17 +5,17 @@ const db = require('../models')
 //ROUTES - http://localhost:3000/posts
 
 //get all posts
-router.get('/', async (req, res, next) => {
-    try {
-        const posts = await db.Post.find({});
-        const context = { posts }
-        return res.render('profile.ejs', context);
-    } catch (error) {
-        console.log(error);
-        req.error = error;
-        return next();
-    }
-});
+// router.get('/', async (req, res, next) => {
+//     try {
+//         const posts = await db.Post.find({});
+//         const context = { posts }
+//         return res.render('profile.ejs', context);
+//     } catch (error) {
+//         console.log(error);
+//         req.error = error;
+//         return next();
+//     }
+// });
 
 router.get('/new/:id', async (req, res, next) =>{
     const context = {user: req.params.id}
@@ -69,13 +69,13 @@ router.get('/edit/:postId', async (req,res, next)=>{
     }
 })
 
-//(5) "Save Button" on Edit Post Page; 
+//"Save Button" on Edit Post Page; 
 router.put('/edit/:postId', async (req, res, next) => {
     try {
         const updatedPost = await db.Post.findByIdAndUpdate(req.params.postId, req.body);
         const user = await db.User.findById(updatedPost.user)
         // console.log(req.body);
-        console.log(user);
+        // console.log(user);
         return res.redirect(`/users/profile/${user._id}`)
         console.log(req.body)
     } catch (error) {
@@ -85,28 +85,17 @@ router.put('/edit/:postId', async (req, res, next) => {
     }
 })
 
-// // (6) "Delete" post
-// router.delete('/:postId', async (req,res, next)=>{
-//     try {
-//         const deletedPost = await db.Post.findByIdAndDelete(req.params.postId);
-//         return res.redirect(`/users/profile/${req.params.postId}`)
-//     } catch (error) {
-//         console.log(error);
-//         req.error = error;
-//         return next();
-//     }
-// })
-// update - PUT route
-// router.put('/:postId', async (req,res, next)=>{
-//     res.send('hitting post update: '+req.params.postId)
-// })
-// // edit - GET - serve an edit.ejs
-// router.get('/:postId/edit', async (req,res, next)=>{
-//     res.send('hitting post edit: '+req.params.postId)
-// })
-// // destroy - delete 
-// router.delete('/:postId', async (req,res, next)=>{
-//     res.send('hitting post delete: '+req.params.postId)
-// })
+//"Delete" post
+router.delete('/:postId', async (req,res, next)=>{
+    try {
+        const deletedPost = await db.Post.findByIdAndDelete(req.params.postId);
+        const user = await db.User.findById(deletedPost.user)
+        return res.redirect(`/users/profile/${user._id}`)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
 
 module.exports = router
