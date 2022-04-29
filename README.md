@@ -106,3 +106,4 @@ When opening the website, users will be directed to the Welcome Page where they 
 On top of resolving the above mentioned problems, we would like to enhance the site with the following added features:
 - User will be given an option to search different accounts
 - User will be given an option to like a post
+## 3
