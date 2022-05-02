@@ -211,15 +211,22 @@ li {
     flex-wrap: wrap;
     gap: 15px;
     margin-left: 32px;
-    border: dotted rgb(206, 63, 219);
+    margin-right: 32px;
+    /* border: dotted rgb(206, 63, 219); */
     /* width: 200px;
     height: 200px; */
+}
+
+.post {
+    width: 400px;
+    height: 400px;
 }
 
 .post-image {
     width: 100%;
     height: 100%;
     display: flex;
+
     /* object-fit: cover; */
 }
 
