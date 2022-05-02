@@ -1,4 +1,485 @@
 body {
-    background-color: rgb(214, 216, 219);
+    background-color:#e4e4e4;
+    margin: 0;
     font-family: 'Karla', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.is-hidden {
+    display: none;
+}
+
+
+/* Profile Grid */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    /* grid-auto-rows: minmax(100px, auto); */
+    max-width: 50rem;
+}
+
+.profile-nav-bar {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    border-bottom: solid 1px #c8c8c8;
+    /* height: fit-content; */
+    height: 30px;
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 20px;
+    /* white-space: nowrap; */
+    
+}
+
+.nav-bar {
+    border-bottom: solid 1px #c8c8c8;
+    height: 30px;
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.profile-image {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    margin-left: 32px;
+    width: 125px;
+    height: 125px;
+}
+
+.user-settings {
+    grid-column: span 2 / span 4;
+    grid-row: 2;
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    margin-top: 1px
+    }
+
+.username {
+    display: inline-block;
+    font-size: 2rem;
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.edit-btn {
+    height:30px; 
+    width:50px;
+    font-size: 15px;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0 5rem;
+    margin-top: 73px;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+}    
+
+.settings-btn {
+    border: none;
+    background: transparent;
+    margin-top: 12px;
+}
+
+.profile-stats {
+    grid-column: span 2 / span 4;
+    grid-row: 3;
+    /* font-size: 16px;
+    margin-right: 40px; */
+    /* margin: 0; */
+    /* margin-bottom: 3rem; */
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 40px;
+    padding: 20px 0;
+
+}
+
+.stat-count {
+    font-style: bold;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #c8c8c8
+}
+
+.navigation-item {
+    display: flex;
+    align-items: center;
+    color: rgb(78, 78, 78);
+    margin-right: 50px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.navigation-item.active::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width:100%;
+    background-color: black;
+    top: -1px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.navigation-item.active .navigation-item-text  {
+    color: black;
+}
+
+.navigation-item.active .nav-icon path {
+    fill: black;
+}
+
+.navigation-item-text {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(76, 76, 76);
+    letter-spacing: 1px;
+}
+
+.nav-icon {
+    margin-right: 6px;
+}
+
+.profile-bio {
+    grid-column: span 1 / span 5;
+    grid-row: 4;
+    /* display: flex;
+    flex-direction: row; */
+    margin-left: 32px;
+    margin-right: 32px;
+    /* border: dotted orange */
+}
+
+.logo {
+    margin-left: 32px;
+}
+
+.icons {
+    margin-left: 9em;
+    /* height: 20px;
+    width: 20px; */
+}
+
+.tour{
+    margin-left: 10em;
+    height: 1.8em;
+    width: 16em;
+}
+
+.create {
+    color: black;
+}
+
+
+/* Post Gallery */
+.gallery-grid {
+    display: flex;
+    gap: 15px;
+    margin-left: 32px;
+    border: dotted rgb(206, 63, 219);
+    width: 400px;
+    height: 400px;
+}
+
+.post-image {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr; */
+    object-fit: cover;
+}
+
+
+/* Show.ejs */
+
+.selected-post-img {
+    border-radius: 5px;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #aaaaaa;
+}
+
+.button1:hover {
+    background-color: #838383;
+    color: white;
+}
+
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #aaaaaa;
+}
+
+.button2:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #aaaaaa;
+}
+
+.button3:hover {
+    background-color: #838383;
+    color: white;
+}
+
+.button4 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #aaaaaa;
+}
+
+.button4:hover {
+    background-color: #838383;
+    color: white;
+}
+
+.button5 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #aaaaaa;
+}
+
+.button5:hover {
+    background-color: #838383;
+    color: white;
+}
+
+.btn-set {
+    display: flex;
+    justify-content: space-around;
+    max-width: 450px;
+}
+
+/* Create Post */
+
+.button3 {
+    margin-top: 20px;
+}
+
+.button5 {
+    margin-top: 20px;
+    /* max-width: fit-content; */
+}
+
+/* img {
+    display: block;
+    width: 100%;
+    height: 100%;
+} */
+
+/* .container {
+    max-width:72rem;
+    margin: 0 auto;
+    pad: 0 2rem;
+} */
+
+/* .container {
+    max-width: 72rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) ;
+    gap: 4;
+    justify-content: center;
+} */
+
+
+/* .visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    widows: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+} */
+
+/* .profile {
+    padding: 5rem 0;
+    border: dotted 1px rgb(5, 245, 161)
+} */
+
+
+/* .user-settings,
+/* .profile-stats, */
+/* .profile-bio {
+    float: left;
+    width: calc(66.66% - 2rem);
+} */ 
+
+/* .user-settings {
+    margin-top: 1.1rem;
+    border: dotted 1px red
+} */
+
+
+
+
+
+
+/* .profile-stats li{
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
+}
+
+.profile-stats li:last-of-type {
+    margin-right: 0;
+}
+
+
+
+.profile-bio {
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-top: 2.3rem;
+    border: dotted 1px orange
+}
+.profile-name,
+.profile-stat-count,
+.edit-btn {
+    font-weight: 600;
+}
+
+.gallery {
+    border: solid 1px magenta;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 1rem;
+    padding-bottom: 3rem;
+}
+
+.post {
+    position: relative;
+    flex: 1 1 10rem;
+    margin: 1rem;
+    color:black
+    cursor: pointer;
+}
+
+.post:hover .post-info,
+.post:focus .post-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.post-info {
+    display: none;
+}
+
+.post-info li {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+
+/* .post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+
+
+    /* .profile-image,
+    .user-settings,
+    .profile-stats,
+    .profile-bio{} */
+
+.polaroid {
+    background: #bebebe;
+    display: inline-block;
+    margin: 200px 300px 100px;
+    padding: 20px 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+    z-index: 0;
+    position: relative;
+    justify-content: center;
+}
+.polaroid :after {
+    color: #333;
+    font-size: 25px;
+    content: attr(title);
+    position: relative;
+    top: 15px;
+}
+
+.polaroid:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
 }

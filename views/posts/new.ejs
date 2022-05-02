@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head.ejs')%>
+    <div class="nav-bar">
+        <nav>
+            <span class="logo">
+                Plantagram
+            </span>
+            <span class="icons">
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-comment"></i>
+                <i class="far fa-compass"></i>
+            </span>
+        </nav>
+    </div> 
     <body>
-        <h1>Create Post</h1>
-        <form method='POST' action='/posts/new'>
-            <div>
-                <label for='image'> Post Image(url): </label>
-                <input id='image' name='image' type='text' />
-            </div>
-            <div>
-                <label for='caption'> Write A Caption: </label>
-                <input id='caption' name='caption' type='text' />
-            </div>
-            <div>
-                <label for='location'> Location: </label>
-                <input id='location' name='location' type='location' />
-            </div>
-            <div>
-                <label for='user'> User </label>
-                <input id='user' name='user' type='user' value='<%=user %>' readonly/>
-            </div>
-            
-            <input type='submit' value='Create New Post'>
-        </form>
+        <div class="polaroid">
+            <h1>Create Post <i class="fa-solid fa-camera"></i></h1>
+            <form method='POST' action='/posts/new'>
+                <div class="input-box">
+                    <label for='image'> Post Image(url): </label>
+                    <input id='image' name='image' type='text' />
+                </div>
+                <div class="input-box">
+                    <label for='caption'> Write A Caption: </label>
+                    <input id='caption' name='caption' type='text' />
+                </div>
+                <div class="input-box">
+                    <label for='location'> Location (City, State): </label>
+                    <input id='location' name='location' type='location' />
+                </div>
+                <div class="input-box">
+                    <label class="is-hidden" for='user'> User </label>
+                    <input class="is-hidden" id='user' name='user' type='user' value='<%=user %>' readonly/>
+                </div>
+                <input class="button button3" type='submit' value='Create New Post!'>
+            </form>
+        </div>
     </body>
 
 </html>
