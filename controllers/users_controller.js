@@ -82,12 +82,13 @@ router.get('/profile/:id', async (req, res, next) => {
     try {
         const foundUser = await db.User.findById(req.params.id).populate('posts')
         // const allPosts = await db.Post.find({user: req.params.id})
+        console.log(foundUser)
         const context = { 
             oneUser: foundUser,
             posts: foundUser.posts
         }
         return res.render('profile.ejs', context)
-        console.log(context)
+        // console.log(context)
         // console.log(foundUser)
         // console.log(req.params.id)
     } catch (error) {
