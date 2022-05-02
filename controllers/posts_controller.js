@@ -6,8 +6,21 @@ const db = require('../models');
 
 // Displays a form for a new post
 router.get('/new/:id', async (req, res, next) =>{
-    const context = {user: req.params.id};
-    res.render('posts/new.ejs', context);
+    const context = {user: {_id: req.params.id}};
+    console.log(context)
+    // try {
+    //     const foundPost = await db.Post.findById(req.params.id).populate('user')
+    //     const context = { 
+    //         post: foundPost,
+    //         user: foundPost.user
+    //     };
+    //     console.log(context)
+        res.render('posts/new.ejs', context);
+    // }catch(error){
+    //     console.log(error);
+    //     req.error = error;
+    //     return next();
+    // };
 });
 
 // Create - POST route 
@@ -43,8 +56,10 @@ router.get('/:postId', async (req,res, next)=>{
 router.get('/edit/:postId', async (req,res, next)=>{
     try {
         const updatedPost = await db.Post.findById(req.params.postId);
+        const updatingUser = await db.User.findById(updatedPost.user)
         const context = {
-            post: updatedPost
+            post: updatedPost,
+            user: updatingUser 
         };
         return res.render('posts/edit.ejs', context);
     } catch (error) {
