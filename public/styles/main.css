@@ -65,6 +65,21 @@ li {
     height: 125px;
 }
 
+.image-cropper {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+.nav-prof-image {
+  display: inline-block;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
 .user-settings {
     grid-column: span 2 / span 4;
     grid-row: 2;
