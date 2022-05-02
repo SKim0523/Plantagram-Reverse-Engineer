@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('partials/head.ejs')%>
-
 <body>
     <div class="profile-grid">    
         <div class="profile-nav-bar">
@@ -15,7 +14,7 @@
                     <i class="fa-regular fa-heart"></i>
                     <i class="fa-regular fa-comment"></i>
                     <i class="far fa-compass"></i>
-                    <i class="fa-solid fa-user-plus"></i>
+                    <a href="/users/registration"><i class="fa-solid fa-user-plus"></i></a>
                 </span>
             </nav>
         </div> 
@@ -24,7 +23,7 @@
         </div>
         <div class="user-settings">
             <h1 class="username"><%=oneUser.username %></h1>
-            <button class="edit-btn"> <a href="/users/profile/edit/<%=oneUser._id %>"></a> Edit Section </button>
+            <button class="edit-btn"> <a href="/users/profile/edit/<%=oneUser._id %>">Edit Profile</a></button>
             <button class="settings-btn"> <i class="fa-solid fa-gear"></i> </button>
         </div>
         <div class="profile-stats">
