@@ -24,7 +24,7 @@
         </div>
         <div class="user-settings">
             <h1 class="username"><%=oneUser.username %></h1>
-            <button class="edit-btn"> <a href="/users/profile/edit/<%=oneUser._id %>"></a> Edit Section </button>
+            <a class="edit-btn" href="/users/profile/edit/<%=oneUser._id %>">Edit Section</a>
             <button class="settings-btn"> <i class="fa-solid fa-gear"></i> </button>
         </div>
         <div class="profile-stats">
@@ -57,22 +57,22 @@
         </li>
     </ul>
 <main>
-        <div class="gallery-grid">
-            <div class="post">
-                <% for(let i = 0; i < posts.length; i++){ %>
-                <% const post=posts[i] %>
-                <a href="/posts/<%=post._id %>">
-                <img src="<%= post.image %>" class="post-image" alt="<%= post.caption %> Image">
-                </a>
-                <% } %> 
-                <div class="post-info">
-                    <ul>
-                        <li class="likes"><span class="visually-hidden"></span><i class="fa-solid fa-heart"></i></li>
-                        <li class="comments"><span class="visually-hidden"></span><i class="fa-solid fa-comment-slash"></i></li>
-                    </ul>
-                </div>
+    <div class="gallery-container">
+        <% for(let i = 0; i < posts.length; i++){ %>
+        <% const post=posts[i] %>
+        <div class="post">
+        <a href="/posts/<%=post._id %>">
+        <img src="<%= post.image %>" class="post-image" alt="<%= post.caption %> Image">
+        </a>
+            <div class="post-info">
+                <ul>
+                    <li class="likes"><span class="visually-hidden"></span><i class="fa-solid fa-heart"></i></li>
+                    <li class="comments"><span class="visually-hidden"></span><i class="fa-solid fa-comment-slash"></i></li>
+                </ul>
             </div>
         </div>
-    </main>
+        <% } %>
+    </div>
+</main>
 </body>
 </html>
