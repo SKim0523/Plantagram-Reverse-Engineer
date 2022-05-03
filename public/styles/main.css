@@ -36,12 +36,26 @@ li {
 
 .nav-bar {
     border-bottom: solid 1px #c8c8c8;
-    height: 60px;
+    height: 95px;
     margin-top: 5px;
-    /* position: relative; */
     display: flex;
-    flex-flow: row no wrap;
-    font-size: 40px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 35px;
+}
+
+.main-logo {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 200px;
+    margin-left: 100px;
+}
+
+.main-icons {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 400px;
+    gap: 10px;
 }
 
 .profile-image {
@@ -214,25 +228,10 @@ li {
     border-radius: 5px;
 }
 
-/* .button {
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 5px;
-} */
-
 .btn-set {
     display: flex;
     justify-content: space-around;
     margin-left: 15px;
-    /* max-width: 450px; */
 }
 
 .polaroid {
@@ -260,16 +259,6 @@ li {
     position: relative;
     top: 15px;
 }
-
-/* .polaroid:hover {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-    z-index: 10;
-    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-} */
 
 .photo-strip a {
     background: #ffffff;
