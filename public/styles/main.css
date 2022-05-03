@@ -288,15 +288,6 @@ li {
     width: 250px;
     margin-top: 10px;
 }
-/* .photo-strip a:hover {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-    z-index: 10;
-    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-} */
 
 .reg-template {
     display: flex;
@@ -348,4 +339,17 @@ a {
     position: relative;
     top: 5px;
     transition: all 250ms ease;
+}
+
+.plantagram-logo {
+    height: 25px;
+    width: 25px;
+    margin-left: 175px;
+}
+
+.reg-template-main {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
 }
