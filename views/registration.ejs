@@ -2,26 +2,35 @@
 <html lang="en">
     <%- include('partials/head.ejs')%>
 <body>
-    <h1>Welcome to Plantagram!</h1>
-    <h2>Register Below</h2>
-    <form method="POST" action="/users/registration">
-        <div>
-            <label for="name">Name:</label>
-            <input id="name" name="name" type="text"/>
+    <div class="reg-template">
+        <div class="photo-strip">
+            <a href="#" title="Plantagram">
+            <img height="250" src="https://i.pinimg.com/564x/cc/66/b9/cc66b91a50ab2d889882568b90f3f7ee.jpg" alt="Plantagram" title="Plantagram Pink Hoya" />
+            <img height="250" src="https://i.pinimg.com/236x/0b/8a/b8/0b8ab8b360f694c9f3251f46cc53e844.jpg" alt="Plantagram" title="Blue flower"" /> 
         </div>
-        <div>
-            <label for="username">Username:</label>
-            <input id="username" name="username" type="text"/>
-        </div>
-        <div>
-            <label for="image">Profile Photo:</label>
-            <input id="image" name="image" type="text"/>
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input id="email" name="email" type="text"/>
-        </div>
-        <input type="submit" value="Create Account"/>
-    </form>
+        <div class="form">
+            <h1>Welcome to Plantagram!</h1>
+            <h2>Register Below</h2>
+            <form method="POST" action="/users/registration">
+                <div>
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="text"/>
+                </div>
+                <div>
+                    <label for="username">Username:</label>
+                    <input id="username" name="username" type="text"/>
+                </div>
+                <div>
+                    <label for="image">Profile Photo:</label>
+                    <input id="image" name="image" type="text"/>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="text"/>
+                </div>
+                <input class="create-button" type="submit" value="Create Account"/>
+            </form>
+        </div> 
+    </div>
 </body>
 </html>
