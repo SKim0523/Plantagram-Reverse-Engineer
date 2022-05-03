@@ -14,11 +14,20 @@ MEN - Full stack app building (Team Project of Sarah Kim and Brigitte Quintero)
 ## Wireframe:
 When opening the website, users will be directed to the Welcome Page where they can register and create an account. Once they have Created Account, they will be directed to a their Profile Page. Users can click on the Tour link to have a tour of the site that will give them a quick How To on navigating and using the site.
 
-![IMG_2805](https://user-images.githubusercontent.com/101548840/165372339-d15d18b1-1a85-4f1a-bb22-768846abed29.jpg)
+### Registration Page
+![image](https://user-images.githubusercontent.com/79298250/166408231-692b396c-e1e5-4252-b556-839210974f01.png)
+### Profile Page
+![image](https://user-images.githubusercontent.com/79298250/166408150-95028a1a-59b3-4930-80e6-4b37cf2f5cc8.png)
+### Tour Page
+![image](https://user-images.githubusercontent.com/79298250/166408299-fda37ec6-919c-482b-9fbb-71b879b9ce2a.png)
 
- From the the profile page, users can do a few things such as creating post, viewing a post, and editing their profile. Once a post has been created, users will also be able to update and delete their post.
-![IMG_2806](https://user-images.githubusercontent.com/101548840/165372362-ac98cebb-386d-434c-9354-c2a6a0d20b3d.jpg)
-
+From the the profile page, users can do a few things such as creating post, viewing a post, and editing their profile. Once a post has been created, users will also be able to update and delete their post.
+### Create Post Page
+![image](https://user-images.githubusercontent.com/79298250/166408353-6c34e60d-ac95-456a-8894-f9dbc3e276a3.png)
+### Edit Post Page
+![image](https://user-images.githubusercontent.com/79298250/166408434-dcde0a5e-cdd7-4ff0-ae58-b0078886f533.png)
+### Edit Profile Page
+![image](https://user-images.githubusercontent.com/79298250/166408404-a089ee94-b004-454e-94f0-e026ebd734fa.png)
 
 ## Technologies Used:
 - JavaScript
