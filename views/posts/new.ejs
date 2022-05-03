@@ -9,7 +9,7 @@
             <a href="#" title="Plantagram">
             <img height="250" src="https://i.pinimg.com/736x/b1/36/76/b13676c83c5e48d9015a583a29439e84.jpg" alt="Plantagram" title="Succulent" />
             <img height="250" src="https://i.pinimg.com/236x/44/8f/06/448f0667aeeefcc74e7af85c2faa58e0.jpg" alt="Plantagram" title="Blue flower"" /> 
-        </div>
+        </div> 
         <h1>Create Post <i class="fa-solid fa-camera"></i></h1>
         <form method='POST' action='/posts/new'>
             <div class="input-box">
@@ -26,9 +26,9 @@
             </div>
             <div class="input-box">
                 <label class="is-hidden" for='user'> User </label>
-                <input class="is-hidden" id='user' name='user' type='user' value='<%=user %>' readonly/>
+                <input class="is-hidden" id='user' name='user' type='user' value='<%=user._id %>' readonly/>
             </div>
-            <input class="create-button" type='submit' value='Create New Post!'>
+            <input class="button button3" type='submit' value='Create New Post!'>
         </form>
     </div>
 </body>
