@@ -14,9 +14,9 @@
                 <h4><%=post.location%></h4>
             </div>
             <div class="btn-set">
-                <a class="create-button" href="/posts/edit/<%= post._id %>">Edit Post</a>
+                <button class="create-button" > <a href="/posts/edit/<%= post._id %>">Edit</a></button>
                 <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-                <input class="delete-button" type="submit" value="Delete Post" />
+                <input class="delete-button" type="submit" value="Delete" />
             </form>
             </div>
         </div>

@@ -2,6 +2,7 @@ body {
     background-color:#e4e4e4;
     margin: 0;
     font-family: 'Karla', sans-serif;
+    max-width: 1500px;
 }
 
 li {
@@ -37,9 +38,9 @@ li {
     border-bottom: solid 1px #c8c8c8;
     height: 60px;
     margin-top: 5px;
-    position: relative;
+    /* position: relative; */
     display: flex;
-    justify-content: space-evenly;
+    flex-flow: row no wrap;
     font-size: 40px;
 }
 
@@ -58,21 +59,6 @@ li {
     margin-left: 32px;
     width: 200px;
     height: 200px;
-}
-
-.image-cropper {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-}
-.nav-prof-image {
-    display: inline-block;
-    margin: 0 auto;
-    height: 100%;
-    width: auto;
 }
 
 .user-settings {
@@ -104,13 +90,6 @@ li {
     /* text-align: center; */
     cursor: pointer;
 }    
-
-.settings-btn {
-    border: none;
-    background: transparent;
-    margin-top: 12px;
-    height: 10px;
-}
 
 .profile-stats {
     grid-column: span 2 / span 4;
@@ -173,7 +152,7 @@ li {
 
 .navigation-item-text {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
     color: rgb(76, 76, 76);
     letter-spacing: 1px;
 }
@@ -215,6 +194,7 @@ li {
     gap: 15px;
     margin-right: 32px;
     background-color: rgb(249, 249, 249);
+    max-width: 1300px;
 }
 
 .post {
@@ -354,7 +334,7 @@ a {
     cursor: pointer;
 }
 
-.delete-button:active {  
+.create-button:active {  
     box-shadow: none !important;
     position: relative;
     top: 5px;
@@ -366,7 +346,7 @@ a {
     border: 2px solid rgb(65, 65, 65);
     border-radius: 5px;
     box-shadow: 1px 4px 0px #888888;
-    color: rgb(9, 8, 8);
+    color: rgb(255, 255, 255);
     font-size: 20px;  
     height: 50px;
     width: 200px;
