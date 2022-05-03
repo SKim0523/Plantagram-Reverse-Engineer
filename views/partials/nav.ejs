@@ -1,9 +1,12 @@
 <div class="nav-bar">
     <nav>
-        <span class="logo">
-            Plantagram
-        </span>
-        <span class="icons">
+        <div class="logo">
+            <span>
+                Plantagram
+            </span>
+        </div>
+        <div class="icons">
+            <span>
             <a href="/users/profile/<%=user._id %>"><i class="fa-solid fa-house"></i></a>
             <i class="fa-regular fa-heart"></i>
             <i class="fa-regular fa-comment"></i>
@@ -11,6 +14,7 @@
             <div class="image-cropper">
             <img class="nav-prof-image" src="<%=user.profile_image %>" alt="<%=user.name%>">
             </div>
+        </div>
         </span>
     </nav>
 </div> 

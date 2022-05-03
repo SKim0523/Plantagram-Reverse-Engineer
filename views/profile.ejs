@@ -23,8 +23,7 @@
         </div>
         <div class="user-settings">
             <h1 class="username"><%=oneUser.username %></h1>
-            <a class="edit-btn" href="/users/profile/edit/<%=oneUser._id %>">Edit Section</a>
-            <button class="settings-btn"> <i class="fa-solid fa-gear"></i> </button>
+            <button class="edit-btn"><a href="/users/profile/edit/<%=oneUser._id %>">Edit Profile</a></button>
         </div>
         <div class="profile-stats">
             <ul class="stats">
@@ -63,12 +62,6 @@
         <a href="/posts/<%=post._id %>">
         <img src="<%= post.image %>" class="post-image" alt="<%= post.caption %> Image">
         </a>
-            <div class="post-info">
-                <ul>
-                    <li class="likes"><span class="visually-hidden"></span><i class="fa-solid fa-heart"></i></li>
-                    <li class="comments"><span class="visually-hidden"></span><i class="fa-solid fa-comment-slash"></i></li>
-                </ul>
-            </div>
         </div>
         <% } %>
     </div>

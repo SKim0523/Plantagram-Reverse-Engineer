@@ -12,10 +12,9 @@ li {
     display: none;
 }
 
-/* Profile Grid */
 .profile-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     max-width: 50rem;
@@ -25,27 +24,23 @@ li {
     grid-column: 1 / 4;
     grid-row: 1;
     border-bottom: solid 1px #c8c8c8;
-    /* height: fit-content; */
+    height: fit-content;
     height: 30px;
-    margin-top: 5px;
-    position: relative;
+    margin-top: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
     flex-wrap: wrap;
     font-size: 20px;
-    /* white-space: nowrap; */
-    
 }
 
 .nav-bar {
     border-bottom: solid 1px #c8c8c8;
-    height: 30px;
+    height: 60px;
     margin-top: 5px;
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    font-size: 20px;
+    font-size: 40px;
 }
 
 .profile-image {
@@ -61,8 +56,8 @@ li {
 .profile-image img {
     border-radius: 50%;
     margin-left: 32px;
-    width: 125px;
-    height: 125px;
+    width: 200px;
+    height: 200px;
 }
 
 .image-cropper {
@@ -72,42 +67,40 @@ li {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-  }
+}
 .nav-prof-image {
-  display: inline-block;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
+    display: inline-block;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
 }
 
 .user-settings {
     grid-column: span 2 / span 4;
     grid-row: 2;
-    /* display: flex; */
-    justify-content:center;
-    /* flex-wrap: wrap; */
     margin-top: 1px;
     align-items: center;
     }
 
 .username {
     display: inline-block;
+    text-align: center;
     font-size: 2rem;
     font-size: 4rem;
     font-weight: 300;
+    margin-bottom: 5px;
 }
 
 .edit-btn {
     height:30px; 
     font-size: 15px;
-    border: 0.1rem solid #dbdbdb;
+    border: 0.1rem solid #c7c7c7;
     border-radius: 0.3rem;
-    background-color: transparent;
+    background-color: rgb(237, 237, 237);
     padding: 0 5rem;
     display: flex;
     align-items: center;
-    /* margin-top: 73px;
-    margin-left: 10px; */
+    margin-left: 10px;
     /* text-align: center; */
     cursor: pointer;
 }    
@@ -116,23 +109,21 @@ li {
     border: none;
     background: transparent;
     margin-top: 12px;
+    height: 10px;
 }
 
 .profile-stats {
     grid-column: span 2 / span 4;
     grid-row: 3;
-    /* font-size: 16px;
-    margin-right: 40px; */
-    /* margin: 0; */
-    /* margin-bottom: 3rem; */
 }
 
 .stats {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     margin-right: 40px;
     padding: 20px 0;
+    font-size: 28px;
 
 }
 
@@ -146,7 +137,9 @@ li {
 .navigation-list {
     display: flex;
     justify-content: center;
-    border-top: 1px solid #c8c8c8
+    border-top: 1px solid #c8c8c8;
+    border-bottom: 1px solid #c8c8c8;
+    margin-bottom: 0;
 }
 
 .navigation-item {
@@ -192,11 +185,9 @@ li {
 .profile-bio {
     grid-column: span 1 / span 5;
     grid-row: 4;
-    /* display: flex;
-    flex-direction: row; */
     margin-left: 32px;
     margin-right: 32px;
-    /* border: dotted orange */
+    font-size: 25px;
 }
 
 .logo {
@@ -205,8 +196,6 @@ li {
 
 .icons {
     margin-left: 9em;
-    /* height: 20px;
-    width: 20px; */
 }
 
 .tour{
@@ -219,39 +208,33 @@ li {
     color: black;
 }
 
-/* Post Gallery */
 .gallery-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
-    margin-left: 32px;
     margin-right: 32px;
-    /* border: dotted rgb(206, 63, 219); */
-    /* width: 200px;
-    height: 200px; */
+    background-color: rgb(249, 249, 249);
 }
 
 .post {
-    width: 400px;
-    height: 400px;
+    width: 385px;
+    height: 385px;
+    margin-left: 32px;
+    margin-top: 32px;
 }
 
 .post-image {
     width: 100%;
     height: 100%;
     display: flex;
-
-    /* object-fit: cover; */
 }
-
-/* Show.ejs */
 
 .selected-post-img {
     border-radius: 5px;
 }
 
-.button {
+/* .button {
     border: none;
     color: white;
     padding: 16px 32px;
@@ -263,211 +246,22 @@ li {
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 5px;
-}
-
-.button1 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #aaaaaa;
-}
-
-.button1:hover {
-    background-color: #838383;
-    color: white;
-}
-
-.button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #aaaaaa;
-}
-
-.button2:hover {
-    background-color: #f44336;
-    color: white;
-}
-
-.button3 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #aaaaaa;
-}
-
-.button3:hover {
-    background-color: #838383;
-    color: white;
-}
-
-.button4 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #aaaaaa;
-}
-
-.button4:hover {
-    background-color: #838383;
-    color: white;
-}
-
-.button5 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #aaaaaa;
-}
-
-.button5:hover {
-    background-color: #838383;
-    color: white;
-}
+} */
 
 .btn-set {
     display: flex;
     justify-content: space-around;
-    max-width: 450px;
+    margin-left: 15px;
+    /* max-width: 450px; */
 }
-
-/* Create Post */
-
-.button3 {
-    margin-top: 20px;
-}
-
-.button5 {
-    margin-top: 20px;
-    /* max-width: fit-content; */
-}
-
-/* img {
-    display: block;
-    width: 100%;
-    height: 100%;
-} */
-
-/* .container {
-    max-width:72rem;
-    margin: 0 auto;
-    pad: 0 2rem;
-} */
-
-/* .container {
-    max-width: 72rem;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    padding: 2.5rem;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr)) ;
-    gap: 4;
-    justify-content: center;
-} */
-
-
-/* .visually-hidden {
-    position: absolute !important;
-    height: 1px;
-    widows: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-} */
-
-/* .profile {
-    padding: 5rem 0;
-    border: dotted 1px rgb(5, 245, 161)
-} */
-
-
-/* .user-settings,
-/* .profile-stats, */
-/* .profile-bio {
-    float: left;
-    width: calc(66.66% - 2rem);
-} */ 
-
-/* .user-settings {
-    margin-top: 1.1rem;
-    border: dotted 1px red
-} */
-
-
-/* .profile-stats li{
-    display: inline-block;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    margin-right: 4rem;
-    cursor: pointer;
-}
-
-.profile-stats li:last-of-type {
-    margin-right: 0;
-}
-
-.profile-bio {
-    font-size: 1.6rem;
-    font-weight: 200;
-    line-height: 1.5;
-    margin-top: 2.3rem;
-    border: dotted 1px orange
-}
-.profile-name,
-.profile-stat-count,
-.edit-btn {
-    font-weight: 600;
-}
-
-.gallery {
-    border: solid 1px magenta;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem 1rem;
-    padding-bottom: 3rem;
-}
-
-.post {
-    position: relative;
-    flex: 1 1 10rem;
-    margin: 1rem;
-    color:black
-    cursor: pointer;
-}
-
-.post:hover .post-info,
-.post:focus .post-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .3);
-}
-
-.post-info {
-    display: none;
-}
-
-.post-info li {
-    display: inline-block;
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-/* .post-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-    /* .profile-image,
-    .user-settings,
-    .profile-stats,
-    .profile-bio{} */
 
 .polaroid {
-    background: #bebebe;
+    background: #ffffff;
     display: inline-block;
     margin: 200px 300px 100px;
-    padding: 20px 20px 40px;
+    padding: 30px 30px 40px;
     text-align: center;
+    font-size: 25px;
     text-decoration: none;
     -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
     -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
@@ -487,7 +281,7 @@ li {
     top: 15px;
 }
 
-.polaroid:hover {
+/* .polaroid:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     transform: scale(1.2);
@@ -495,4 +289,94 @@ li {
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
     -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+} */
+
+.photo-strip a {
+    background: #ffffff;
+    display: inline-block;
+    margin: 55px 75px 30px;
+    padding: 15px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+    z-index: 0;
+    position: relative;
+}
+.photo-strip a:after {
+    color: #333;
+    font-size: 25px;
+    content: attr(title);
+    position: relative;
+    top: 15px;
+}
+.photo-strip img {
+    display: block;
+    width: 250px;
+    margin-top: 10px;
+}
+/* .photo-strip a:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+} */
+
+.reg-template {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.create-button {
+    background: #fdfdfd;
+    border: 2px solid rgb(65, 65, 65);
+    border-radius: 5px;
+    box-shadow: 1px 4px 0px #888888;
+    color: rgb(9, 8, 8);
+    font-size: 20px;  
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.delete-button:active {  
+    box-shadow: none !important;
+    position: relative;
+    top: 5px;
+    transition: all 250ms ease;
+}
+
+.delete-button {
+    background: #b32121;
+    border: 2px solid rgb(65, 65, 65);
+    border-radius: 5px;
+    box-shadow: 1px 4px 0px #888888;
+    color: rgb(9, 8, 8);
+    font-size: 20px;  
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.delete-button:active {  
+    box-shadow: none !important;
+    position: relative;
+    top: 5px;
+    transition: all 250ms ease;
 }
