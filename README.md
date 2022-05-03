@@ -1,24 +1,26 @@
 # Project-Two: Reverse-Engineer
 MEN - Full stack app building (Team Project of Sarah Kim and Brigitte Quintero)
 
-## **Project Description:**
+## Project Description:
 - This project reverse engineers three key features of the Instagram page to build a full-stack web application based on Express, Node.js, Mongoose and MongoDB. The three key features include:
    1. Create a user and posts
    2. Update a user profile and posts
    3. Delete posts 
 - CRUD functionalities are applied based on RESTful architecture.
 - Entity Relationship Diagram shows One-to-Many data relationship between User and Post models:
+
 ![Screen Shot 2022-04-26 at 12 13 59 PM](https://user-images.githubusercontent.com/79298250/165356456-4b5f5b47-648b-46b0-b195-07e7f3354895.png)
 
-## **Wireframe:**
+## Wireframe:
 When opening the website, users will be directed to the Welcome Page where they can register and create an account. Once they have Created Account, they will be directed to a their Profile Page. Users can click on the Tour link to have a tour of the site that will give them a quick How To on navigating and using the site.
+
 ![IMG_2805](https://user-images.githubusercontent.com/101548840/165372339-d15d18b1-1a85-4f1a-bb22-768846abed29.jpg)
 
  From the the profile page, users can do a few things such as creating post, viewing a post, and editing their profile. Once a post has been created, users will also be able to update and delete their post.
 ![IMG_2806](https://user-images.githubusercontent.com/101548840/165372362-ac98cebb-386d-434c-9354-c2a6a0d20b3d.jpg)
 
 
-## **Technologies Used:**
+## Technologies Used:
 - JavaScript
 - Node.js
 - Express
@@ -30,7 +32,7 @@ When opening the website, users will be directed to the Welcome Page where they 
 - GitHub
 - Google Chrome
 
-## **Routes Pages**
+## Routes Pages
 | Method | Route              | Description                    |
 | ------ | ------------------ | ------------------------------ |
 | GET    | /registration      | Lands on registration page     |
@@ -45,7 +47,7 @@ When opening the website, users will be directed to the Welcome Page where they 
 | PUT    | /edit/:postId      | Edits a specific post          | 
 | DELETE | /:postId           | Deletes post                   |
 
-## **User Stories:**
+## User Stories:
 ### Welcome Page  
 1. The Welcome Page displays a registration form, which requests name, username, link to profile photo and email address, as well as a button: "Create Account."
 2. A user populates the requested information and clicks the "Create Account."
@@ -86,24 +88,23 @@ When opening the website, users will be directed to the Welcome Page where they 
 2. A user can edit information and click "Save" button to update information.
 3. Upon clicking the "Save" button, the user is directed back to the Profile Page.
 
-## **MVP Goals**
+## MVP Goals
 1. Replicate below three CRUD features of Instagram using RESTful routes:
-   (1) Create: 
+   #### (1) Create:
       - Register as user using a registration form
       - Create a new post using a new post form
-   (2) Update:
+   #### (2) Update:
       - Update user profile using a profile update form
       - Edit posts using a post edit form
-   (3) Delete:
+   #### (3) Delete:
       - Delete posts using a delete button
 2. User flow improvement: The site will provide a tour option for the orientation of the first-time user
 3. Models: Two database models (user, post) that have one-to-many relationship
 
-## ** Unsolved Problems and Challenges
+## Unsolved Problems and Challenges
 
 
-## **Next Steps**
+## Next Steps
 On top of resolving the above mentioned problems, we would like to enhance the site with the following added features:
 - User will be given an option to search different accounts
 - User will be given an option to like a post
-## 3
