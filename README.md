@@ -111,7 +111,7 @@ From the the profile page, users can do a few things such as creating post, view
 3. Models: Two database models (user, post) that have one-to-many relationship
 
 ## Unsolved Problems and Challenges
-
+Working with grid was a little difficult. Trying to acheive a layout with multiple elements and staggering them on the screen in a way that flowed with our layout was a challenge. We acheived our main goal but without some design functionality we preffered.
 
 ## Next Steps
 On top of resolving the above mentioned problems, we would like to enhance the site with the following added features:
