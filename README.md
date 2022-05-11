@@ -1,7 +1,7 @@
 # Project-Two: Reverse-Engineer
 MEN - Full stack app building (Team Project of Sarah Kim and Brigitte Quintero)
- See our application here:
- https://morning-tundra-63399.herokuapp.com/users/registration
+See our application here:
+https://morning-tundra-63399.herokuapp.com/users/registration
 
 ## Project Description:
 - This project reverse engineers three key features of the Instagram page to build a full-stack web application based on Express, Node.js, Mongoose and MongoDB. The three key features include:
